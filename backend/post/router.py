@@ -1,9 +1,8 @@
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, File, UploadFile
 from backend.post.dao import PostDao
 from backend.user.auth import *
 from backend.post.shemas import SPost
-from typing import List
-from sqlalchemy import or_
+from typing import List, Optional
 
 app = APIRouter(prefix="/posts", tags=["СОЗДАНИЕ И ЧТЕНИЕ ПОСТОВ"])
 
@@ -23,20 +22,23 @@ async def search_posts(tag: str = Query(None), query: str = Query(None)):
         posts = await PostDao.search_posts(tag=tag, query=query)
         return posts
     elif tag:
-        posts = await PostDao.find_date(tags=[tag])
+        posts = await PostDao.find_with_user_info(tags=[tag])
         return posts
     elif query:
         posts = await PostDao.search_posts(query=query)
         return posts
-    return await PostDao.find_date()
+    return await PostDao.find_with_user_info()
 
 @app.post("/create_post")
-async def create_post(post: SPost, user=Depends(get_current_user)):
+async def create_post(post: SPost,  user=Depends(get_current_user)):
+
+    
     await PostDao.add_date(title=post.title,
                           short_description=post.short_description,
                           description=post.description,
                           time=post.time,
                           tags=post.tags,
+ 
                           user_id=int(user.id))
     return "Пост успешно добавлен"
 

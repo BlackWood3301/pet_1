@@ -13,6 +13,9 @@ class Post(Base):
     time: Mapped[int | None]
     tags: Mapped[List[str]] = mapped_column(ARRAY(String))
 
+    # photo_name: Mapped[str | None]
+    # photo: Mapped[bytes | None]
+
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"))
 
     

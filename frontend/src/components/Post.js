@@ -103,7 +103,12 @@ const Post = ({ post, onDelete }) => {
       {/* Post Content */}
       <div className="block px-4 py-2">
         <h2 className="text-xl font-bold text-dark mb-2">{post.title}</h2>
-        <p className="text-secondary">{post.short_description}</p>
+        <div>
+          <p className="text-secondary font-medium mb-3">{post.short_description}</p>
+          <div className="text-dark mt-4 border-t border-gray-100 pt-4">
+            <p className="whitespace-pre-wrap">{post.description}</p>
+          </div>
+        </div>
       </div>
 
       {/* Tags */}
