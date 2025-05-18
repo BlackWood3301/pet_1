@@ -1,0 +1,32 @@
+<svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background shapes -->
+  <circle cx="250" cy="200" r="150" fill="#E1E8ED" fill-opacity="0.5"/>
+  <circle cx="320" cy="150" r="120" fill="#1DA1F2" fill-opacity="0.1"/>
+  
+  <!-- Document shape -->
+  <rect x="150" y="100" width="200" height="240" rx="10" fill="white" stroke="#1DA1F2" stroke-width="3"/>
+  
+  <!-- Document lines -->
+  <line x1="180" y1="140" x2="320" y2="140" stroke="#AAB8C2" stroke-width="3" stroke-linecap="round"/>
+  <line x1="180" y1="170" x2="320" y2="170" stroke="#AAB8C2" stroke-width="3" stroke-linecap="round"/>
+  <line x1="180" y1="200" x2="260" y2="200" stroke="#AAB8C2" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Icons -->
+  <circle cx="210" cy="250" r="20" fill="#1DA1F2"/>
+  <path d="M210 240V260M200 250H220" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  
+  <circle cx="270" cy="250" r="20" fill="#1DA1F2"/>
+  <path d="M270 245L270 255" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M265 245L275 255" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M275 245L265 255" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- People icons -->
+  <circle cx="180" cy="80" r="25" fill="#1DA1F2"/>
+  <circle cx="320" cy="60" r="20" fill="#657786"/>
+  <circle cx="350" cy="320" r="30" fill="#1DA1F2" fill-opacity="0.7"/>
+  
+  <!-- Connection lines -->
+  <path d="M190 95L240 120" stroke="#1DA1F2" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M310 70L290 100" stroke="#657786" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M335 300L280 280" stroke="#1DA1F2" stroke-width="2" stroke-opacity="0.7" stroke-dasharray="4 4"/>
+</svg> 
